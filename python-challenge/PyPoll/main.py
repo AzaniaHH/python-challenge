@@ -34,7 +34,18 @@ print("-------------------------")
 print(f"Winner: {winner}")
 print("-------------------------")
 
-file_path = '/Users/zan/Desktop/python-challenge/python-challenge/PyPoll/main.py.txt'
-with open(file_path, 'w') as file:
-    file.write(code_content)
-file_path 
+text_file_path = '/Users/zan/Desktop/python-challenge/python-challenge/PyPoll/election_results.txt'
+
+with open(text_file_path, mode='w') as text_file:
+    text_file.write("Election Results\n")
+    text_file.write("-------------------------\n")
+    text_file.write(f"Total Votes: {total_votes}\n")
+    text_file.write("-------------------------\n")
+
+    for candidate, votes in candidate_votes.items():
+        percentage = (votes / total_votes) * 100
+        text_file.write(f"{candidate}: {percentage:.3f}% ({votes})\n")
+
+    text_file.write("-------------------------\n")
+    text_file.write(f"Winner: {winner}\n")
+    text_file.write("-------------------------\n")
