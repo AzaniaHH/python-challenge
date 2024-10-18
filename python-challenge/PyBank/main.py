@@ -46,9 +46,16 @@ print(f"Average Change: ${average_change:.2f}")
 print(f"Greatest Increase in Profits: {greatest_increase['date']} (${greatest_increase['amount']})")
 print(f"Greatest Decrease in Profits: {greatest_decrease['date']} (${greatest_decrease['amount']})")
 
-file_path = 'PyBank/Resources/budget_data.csv'
-with open(file_path, 'w') as file:
-    file.write(code_content)
-file_path 
+text_file_path = "/Users/zan/Desktop/python-challenge/python-challenge/PyBank/Resources/financial_analysis.txt"
+
+with open(text_file_path, mode='w') as text_file:
+    text_file.write("Financial Analysis\n")
+    text_file.write("----------------------------\n")
+    text_file.write(f"Total Months: {total_months}\n")
+    text_file.write(f"Total: ${net_total}\n")
+    text_file.write(f"Average Change: ${average_change:.2f}\n")
+    text_file.write(f"Greatest Increase in Profits: {greatest_increase['date']} (${greatest_increase['amount']})\n")
+    text_file.write(f"Greatest Decrease in Profits: {greatest_decrease['date']} (${greatest_decrease['amount']})\n")
+
 
     
