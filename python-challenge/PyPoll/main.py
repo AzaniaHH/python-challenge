@@ -33,3 +33,8 @@ for candidate, votes in candidate_votes.items():
 print("-------------------------")
 print(f"Winner: {winner}")
 print("-------------------------")
+
+file_path = '/Users/zan/Desktop/python-challenge/python-challenge/PyPoll/main.py.txt'
+with open(file_path, 'w') as file:
+    file.write(code_content)
+file_path 
